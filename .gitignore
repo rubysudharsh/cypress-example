@@ -1,1 +1,10 @@
 node_modules
+cypress/fixtures/profile.json
+cypress/fixtures/users.json
+cypress/videos/examples/actions.spec.js.mp4
+cypress/videos/examples/aliasing.spec.js.mp4
+cypress/videos/examples/assertions.spec.js.mp4
+cypress/videos/examples/connectors.spec.js.mp4
+cypress/videos/examples/cookies.spec.js.mp4
+cypress/videos/examples/cypress_api.spec.js.mp4
+cypress/videos/examples/files.spec.js.mp4

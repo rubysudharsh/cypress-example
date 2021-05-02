@@ -23,3 +23,26 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('AddTV', () => {
+    cy.contains('Sale Items').click()
+    cy.contains('Add to Basket').click()
+    cy.get('#option_1').select("No Thanks!")
+    cy.get('.small-12 > .button').click()
+  })
+  Cypress.Commands.add('AddGlasses', () => {
+    cy.contains('Sale Items').click()
+    cy.get('.button.button.small.postfix')
+    .eq(2)
+    .click()
+    cy.get('#option_2').select("Black")
+    cy.get('.small-12 > .button').click()
+  })
+  Cypress.Commands.add('ViewBasket', () => {
+    cy.wait(500)
+    cy.get('#basket-summary').click()
+    cy.get('#basket-detail > .box-basket-content > .pad > .thinpad-top > .button').click()
+  })
+  Cypress.Commands.add('VerifyProductAdded', (productName) => {
+    cy.contains(productName).should('be.visible')
+  })
+
